@@ -1,19 +1,19 @@
 dataSources:
   ds3: !!com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://119.3.52.175:3306/ds3
+    url: jdbc:mysql://192.168.21.102:3306/ds3
     username: root
-    password: 1qazxsw2#edc
+    password: rootroot
   ds4: !!com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://119.3.52.175:3306/ds4
+    url: jdbc:mysql://192.168.21.102:3306/ds4
     username: root
-    password: 1qazxsw2#edc
+    password: rootroot
   ds5: !!com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://119.3.52.175:3306/ds5
+    url: jdbc:mysql://192.168.21.102:3306/ds5
     username: root
-    password: 1qazxsw2#edc
+    password: rootroot
     
 
 shardingRule:

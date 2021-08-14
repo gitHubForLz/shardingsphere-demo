@@ -1,19 +1,19 @@
 dataSources:
   dsmaster: !!com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://119.3.52.175:3306/dsmaster
+    url: jdbc:mysql://192.168.21.102:3306/dsmaster
     username: root
-    password: 1qazxsw2#edc
+    password: rootroot
   dsslave0: !!com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://119.3.52.175:3306/dsslave0
+    url: jdbc:mysql://192.168.21.102:3306/dsslave0
     username: root
-    password: 1qazxsw2#edc
+    password: rootroot
   dsslave1: !!com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://119.3.52.175:3306/dsslave1
+    url: jdbc:mysql://192.168.21.102:3306/dsslave1
     username: root
-    password: 1qazxsw2#edc
+    password: rootroot
 
 masterSlaveRule:
   name: health_ms

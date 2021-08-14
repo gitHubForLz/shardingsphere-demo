@@ -30,6 +30,8 @@ public class TransactionServiceImpl implements TransactionService {
 	JdbcTemplate jdbcTemplate;
 
 	@Override
+	// @Transactional
+	// @ShardingTransactionType(TransactionType.XA)
 	public void processWithXA() throws SQLException {
 		TransactionTypeHolder.set(TransactionType.XA);
 		 
@@ -37,6 +39,7 @@ public class TransactionServiceImpl implements TransactionService {
 	}
 
 	@Override
+
 	public void processWithBASE() throws SQLException {
 		TransactionTypeHolder.set(TransactionType.BASE);
 		 
@@ -49,7 +52,7 @@ public class TransactionServiceImpl implements TransactionService {
 			connection.setAutoCommit(false);
 			
         	try {        		
-        		for (Long i = 1L; i <= 10; i++) {
+        		for (Long i = 100L; i <= 110; i++) {
         			HealthRecord healthRecord = createHealthRecord(i);   		   		
     	    		insertHealthRecord(healthRecord, connection);
     	    		
@@ -58,8 +61,8 @@ public class TransactionServiceImpl implements TransactionService {
     	        	
     	        	result.add(healthRecord.getRecordId());    	   
     	        	
-    	        	//手工抛出异常
-    	        	throw new SQLException("exception occur!");
+    	        	// 手工抛出异常
+    	        	// throw new RuntimeException("exception occur!");
                 }        		
         		connection.commit();
         	} catch (final SQLException ex) {

@@ -21,8 +21,8 @@ public class DemoApplication {
         try (ConfigurableApplicationContext applicationContext = SpringApplication.run(DemoApplication.class, args)) {
         	
         	TransactionService transactionService = applicationContext.getBean(TransactionService.class);
-//        	transactionService.processWithXA();
-        	transactionService.processWithBASE();
+       	transactionService.processWithXA();
+//         	transactionService.processWithBASE();
         }
     }
 }
